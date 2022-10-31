@@ -16,7 +16,7 @@ class handler(BaseHTTPRequestHandler):
         r=r.json()
         capital=r[0]["capital"][0]
         massage=f"The capital of {x} is {capital}"
-    if Query.lower()=="capital":
+    elif Query.lower()=="capital":
         URL=f"https://restcountries.com/v3.1/capital/{x}"
         r=requests.get(URL)
         r=r.json()
